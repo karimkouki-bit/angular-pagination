@@ -1,0 +1,19 @@
+<div class="col-md-12">
+  <h2 class="text-primary">Angular Pagination</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action" *ngFor="let item of List | paginate: { itemsPerPage: 5, currentPage: p }">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">id: {{item.firstName}}</h5>
+            <small>id: {{item.id}}</small>
+          </div>
+          <p class="mb-1">id: {{item.email}}</p>
+          <small>id: {{item.city}}</small>
+        </a>
+      </div>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+    </div>
+  </div>
+</div>
